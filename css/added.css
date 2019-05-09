@@ -1,0 +1,21 @@
+#backBtn,
+#row2,
+#row3,
+#row4,
+#row5 {
+  visibility: hidden;
+}
+
+#creditCardForm,
+#formSummary {
+  display: none;
+}
+
+.tooltip-content {
+  display: flex;
+  color: #512b2b;
+}
+
+#cityDropdown {
+  background-image: url(../img/select-arrow.svg);
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" class="minimalism checked-selector-supported">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="./css/shared.css" rel="stylesheet" type="text/css" media="all">
+  <link href="./css/added.css" rel="stylesheet" type="text/css" media="all">
+  <title>Credit card application form</title>
+</head>
+
+<body>
+
+  <div class="page-content" role="main" id="content">
+
+    <!-- Intro page -->
+        <table class="comparison-table  -mobile-merge-columns " id="introPage">
+          <tbody>
+            <tr>
+              <th>
+                <figure>
+                  <div class="badge -arrow -purple">0 eur</div>
+                  <img class="horizontal-table-icon" alt="Debit Card Plus" src="./img/card1.png" />
+                </figure>
+                <h3>Debit Card Plus</h3>
+              </th>
+              <td class="col-content">
+                <ul class="benefits-list -yellow">
+                  <li>Allow you to make payments online</li>
+                  <li>Can be linked to secure online shopping programme</li>
+                  <li>The most basic card</li>
+                  <li>Withdraw cash in Estonia and abroad</li>
+                </ul>
+              </td>
+              <td class="col-benefits ">
+                <ul class="benefits-list -yellow">
+                  <li>Monthly fee of 2,50 €</li>
+                  <li>Interest fee 17%</li>
+                </ul>
+              </td>
+              <td class="col-action">
+                <p>
+                  <a href="#" class="button" id="orderBtn">Order</a>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+    <!-- 5 questions form -->
+    <form id="creditCardForm">
+      <div class="content-head" id="content-head">
+        <h1>Credit card application form</h1>
+      </div>
+      <div class="successMsg" style="display: none;">Application submitted successfully!</div>
+      <section class="form frame">
+
+          <ol class="form-steps">
+            <li class="active" id="step1">Personal information</li>
+            <li class="passive" id="step2">Summary</li>
+          </ol>
+
+        <div class="form-content" id="formContent">
+            <h3 class="form-header">Personal information</h3>
+
+            <dl>
+              <div id="row1" class="query-params-list">
+                <dt class="fillable-row">
+                  <label for="input-address">First name</label>
+                  <em>*</em>
+                </dt>
+                <dd class="fillable-row">
+                  <input class="form-field-long" type="text" name="firstname" id="firstnameInput" />
+                  <div class="validation-message"></div>
+                </dd>
+              </div>
+
+              <div id="row2" class="query-params-list">
+                <dt class="fillable-row">
+                  <label for="select-city">A city you would like to visit</label>
+                  <em>*</em>
+                </dt>
+                <dd class="fillable-row">
+                  <select class="valid form-field-long" id="cityDropdown" >
+                    <option>Tallinn</option>
+                    <option>Tokyo</option>
+                    <option>Reykjavik</option>
+                  </select>
+                  <div class="validation-message"></div>
+                </dd>
+              </div>
+
+              <div id="row3" class="query-params-list">
+                <dt class="checkable-row">
+                  <label for="radioButtonNormal">Gender</label>
+                </dt>
+                <dd class="checkable-row">
+                  <input type="radio" name="gender" id="radioButton1" value="male" checked/>
+                  <label for="radioButton1">male</label>
+                  <input type="radio" name="gender" id="radioButton2" value="female" />
+                  <label for="radioButton2">female</label>
+                  <div class="validation-message" style="color: #c5131c;"></div>
+                </dd>
+              </div>
+
+              <div id="row4" class="query-params-list">
+                <dt class="checkable-row">
+                  <label for="checkboxNormal">I like</label>
+                  <em>*</em>
+                    
+                      <span id="tooltip"  title="help" class="help-action"></span>
+                      <div class="tooltip-container tooltip-left" style="top: 100%; left: 85%; display: none;" tabindex="0">
+                          <div class="tooltip-content">Choose wisely</div>
+                      </div>
+                  
+                </dt>
+                <dd class="checkable-row">
+                  <input type="checkbox" id="checkBox1" />
+                  <label for="checkBox1">Cats</label>
+                  <input type="checkbox" id="checkBox2" />
+                  <label for="checkBox2">Dogs</label>
+                  <div class="validation-message"  style="color: #c5131c;"></div>
+                </dd>
+              </div>
+
+              <div id="row5" class="query-params-list">
+                <dt class="fillable-row">
+                  <label for="textarea-somemessagetext">What do you plan on doing with your new credit card?</label>
+                  <em>*</em>
+                </dt>
+                <dd class="fillable-row">
+                  <textarea class="form-field-textarea" style="margin: -11px 0px; width: 724px; height: 64px;" id="textareaInput"></textarea>
+                  <div class="validation-message"></div>
+                </dd>
+              </div>
+            </dl>
+        </div>
+
+          <!-- Summary part is injected here -->
+          <div class="form-content" id="formSummary">
+              <h3 class="form-header">Summary</h3>
+            <dl class="query-params-list preview-list">
+            </dl>
+          </div>
+
+        <div class="form-button-bar">
+          <a data-wt-label="" role="button" class="button negative back" href="#" id="backBtn">Back</a>
+          <a data-wt-label="" role="button" class="button primary" href="#" id="nextBtn">Next</a>
+        </div class="form-button-bar">
+      </section>
+    </form>
+    
+  </div>
+  <script src="./script/main.js"></script>  
+</body>
+
+</html>
